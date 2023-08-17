@@ -369,7 +369,7 @@ Nos cours se donnent en présentiel et à distance. Nous oeuvrons aussi dans l'a
                         <div class="ft__widget">
                             <h2 class="ft__title">Suivez-nous</h2>
                             <ul class="social__icon">
-                                <li><a href="#" target="_blank"><i class="zmdi zmdi-linkedin"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/ngalu-business/" target="_blank"><i class="zmdi zmdi-linkedin"></i></a></li>
                             </ul>
                         </div>
                     </div>
