@@ -1,415 +1,515 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ngalu Business, We Design your world!">
+    <meta name="theme-style-mode" content="1"> <!-- 0 == light, 1 == dark -->
+
     <title>Ngalu Business</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <!-- Bootstrap Fremwork Main Css -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <!-- All Plugins css -->
-    <link rel="stylesheet" href="{{ asset('css/plugins.css') }}">
-    <!-- Theme shortcodes/elements style -->
-    <link rel="stylesheet" href="{{ asset('css/shortcode/shortcodes.css') }}">
-    <!-- Theme main style -->
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-    <!-- Responsive css -->
-    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-    <!-- User style -->
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
-
-    <!-- Modernizr JS -->
-    <script src="{{ asset('js/vendor/modernizr-3.11.2.min.js') }}"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
+    <!-- CSS ============================================ -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/animation.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/feature.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/magnify.min.cs') }}s">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/lightbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!-- Body main wrapper start -->
-    <div class="wrapper fixed__footer">
-        <!-- Start Header Style -->
-        <header id="header" class="htc-header">
-            <!-- Start Mainmenu Area -->
-            <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-2 col-lg-2 col-6">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="{{ asset('images/logo/logo-color.png') }}" alt="logo">
-                                </a>
-                            </div>
+    <main class="page-wrapper">
+        <!-- Start Header Area  -->
+        <header class="rainbow-header header-default header-not-transparent header-sticky">
+            <div class="container position-relative">
+                <div class="row align-items-center row--0">
+                    <div class="col-lg-3 col-md-6 col-4">
+                        <div class="logo">
+                            <a href={{ route('home') }}">
+                                <img class="logo-light" src="{{ asset('assets/images/logo/logo.png') }}"
+                                    alt="Ngalu Business Logo">
+                                <img class="logo-dark" src="{{ asset('assets/images/logo/logo-dark.png') }}"
+                                    alt="Ngalu Business Logo">
+                            </a>
                         </div>
-                        <!-- Start MAinmenu Ares -->
-                        <div class="col-md-8 col-lg-8 d-none d-md-block">
-                            <nav class="mainmenu__nav  d-none d-lg-block">
-                                <ul class="main__menu">
-                                    <li><a href="{{ route('home') }}">Accueil</a></li>
+                    </div>
+                    <div class="col-lg-9 col-md-6 col-8 position-static">
+                        <div class="header-right">
+
+                            <nav class="mainmenu-nav d-none d-lg-block">
+                                <ul class="mainmenu">
+                                    <li><a href="#about">A propos de nous</a></li>
+                                    <li><a href="#services">Services</a></li>
+                                    <li><a href="#portfolio">Réalisations</a></li>
                                 </ul>
                             </nav>
 
-                            <div class="mobile-menu clearfix d-block d-lg-none">
-                                <nav id="mobile_dropdown">
-                                    <ul>
-                                        <li><a href="{{ route('home') }}">Accueil</a></li>
-                                    </ul>
-                                </nav>
+                            <!-- Start Mobile-Menu-Bar -->
+                            <div class="mobile-menu-bar ml--5 d-block d-lg-none">
+                                <div class="hamberger">
+                                    <button class="hamberger-button">
+                                        <i class="feather-menu"></i>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <!-- End MAinmenu Ares -->
-                        <div class="col-md-2 col-lg-2 col-6">
-                            {{-- <ul class="menu-extra">
-                                <li class="search search__open d-none d-sm-block"><span class="ti-search"></span></li>
-                                <li><a href="login-register.html"><span class="ti-user"></span></a></li>
-                                <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
-                                <li class="toggle__menu d-none d-md-block"><span class="ti-menu"></span></li>
-                            </ul> --}}
+                            <!-- Start Mobile-Menu-Bar -->
+                            {{--
+                            <div id="my_switcher" class="my_switcher">
+                                <ul>
+                                    <li>
+                                        <a href="javascript: void(0);" data-theme="light" class="setColor light">
+                                            <img class="sun-image" src="assets/images/icons/sun-01.svg" alt="Sun images">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0);" data-theme="dark" class="setColor dark">
+                                            <img class="Victor Image" src="assets/images/icons/vector.svg" alt="Vector Images">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> --}}
+
                         </div>
                     </div>
-                    <div class="mobile-menu-area"></div>
                 </div>
             </div>
-            <!-- End Mainmenu Area -->
         </header>
-        <!-- End Header Style -->
-
-        <div class="body__overlay"></div>
-        <!-- Start Offset Wrapper -->
-        {{-- <div class="offset__wrapper">
-            <!-- Start Search Popap -->
-            <div class="search__area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="search__inner">
-                                <form action="#" method="get">
-                                    <input placeholder="Search here... " type="text">
-                                    <button type="submit"></button>
-                                </form>
-                                <div class="search__close__btn">
-                                    <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
-                                </div>
-                            </div>
-                        </div>
+        <!-- End Header Area  -->
+        <div class="popup-mobile-menu">
+            <div class="inner">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="{{ route('home') }}">
+                            <img class="logo-light" src="{{ asset('assets/images/logo/logo.png') }}"
+                                alt="Ngalu Business Logo">
+                            <img class="logo-dark" src="{{ asset('assets/images/logo/logo-dark.png') }}"
+                                alt="Ngalu Business Logo">
+                        </a>
+                    </div>
+                    <div class="close-menu">
+                        <button class="close-button">
+                            <i class="feather-x"></i>
+                        </button>
                     </div>
                 </div>
-            </div>
-            <!-- End Search Popap -->
-            <!-- Start Offset MEnu -->
-            <div class="offsetmenu">
-                <div class="offsetmenu__inner">
-                    <div class="offsetmenu__close__btn">
-                        <a href="#"><i class="zmdi zmdi-close"></i></a>
-                    </div>
-                    <div class="off__contact">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="{{ asset('images/logo/logo-color.png') }}" alt="logo">
-                            </a>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetu adipisicing elit sed do eiusmod tempor incididunt ut
-                            labore.</p>
-                    </div>
-                    <ul class="sidebar__thumd">
-                        <li><a href="#"><img src="images/sidebar-img/1.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/2.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/3.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/4.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/5.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/6.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/7.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/8.jpg" alt="sidebar images"></a></li>
-                    </ul>
-                    <div class="offset__widget">
-                        <div class="offset__single">
-                            <h4 class="offset__title">Language</h4>
-                            <ul>
-                                <li><a href="#"> Engish </a></li>
-                                <li><a href="#"> French </a></li>
-                                <li><a href="#"> German </a></li>
-                            </ul>
-                        </div>
-                        <div class="offset__single">
-                            <h4 class="offset__title">Currencies</h4>
-                            <ul>
-                                <li><a href="#"> USD : Dollar </a></li>
-                                <li><a href="#"> EUR : Euro </a></li>
-                                <li><a href="#"> POU : Pound </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="offset__sosial__share">
-                        <h4 class="offset__title">Follow Us On Social</h4>
-                        <ul class="off__soaial__link">
-                            <li><a class="bg--twitter" href="https://twitter.com/devitemsllc" target="_blank"
-                                    title="Twitter"><i class="zmdi zmdi-twitter"></i></a></li>
-
-                            <li><a class="bg--instagram" href="https://www.instagram.com/devitems/" target="_blank"
-                                    title="Instagram"><i class="zmdi zmdi-instagram"></i></a></li>
-
-                            <li><a class="bg--facebook" href="https://www.facebook.com/devitems/?ref=bookmarks"
-                                    target="_blank" title="Facebook"><i class="zmdi zmdi-facebook"></i></a></li>
-
-                            <li><a class="bg--googleplus" href="https://plus.google.com/" target="_blank"
-                                    title="Google Plus"><i class="zmdi zmdi-google-plus"></i></a></li>
-
-                            <li><a class="bg--google" href="#" target="_blank" title="Google"><i
-                                        class="zmdi zmdi-google"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- End Offset MEnu -->
-            <!-- Start Cart Panel -->
-            <div class="shopping__cart">
-                <div class="shopping__cart__inner">
-                    <div class="offsetmenu__close__btn">
-                        <a href="#"><i class="zmdi zmdi-close"></i></a>
-                    </div>
-                    <div class="shp__cart__wrap">
-                        <div class="shp__single__product">
-                            <div class="shp__pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/sm-img/1.jpg" alt="product images">
-                                </a>
-                            </div>
-                            <div class="shp__pro__details">
-                                <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$105.00</span>
-                            </div>
-                            <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
-                            </div>
-                        </div>
-                        <div class="shp__single__product">
-                            <div class="shp__pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/sm-img/2.jpg" alt="product images">
-                                </a>
-                            </div>
-                            <div class="shp__pro__details">
-                                <h2><a href="product-details.html">Brone Candle</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$25.00</span>
-                            </div>
-                            <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="shoping__total">
-                        <li class="subtotal">Subtotal:</li>
-                        <li class="total__price">$130.00</li>
-                    </ul>
-                    <ul class="shopping__btn">
-                        <li><a href="cart.html">View Cart</a></li>
-                        <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End Cart Panel -->
-        </div> --}}
-        <!-- End Offset Wrapper -->
-        <!-- Start Slider Area -->
-        <div class="slider__container slider--one">
-            <div class="slider__activation__wrap owl-carousel owl-theme">
-                <!-- Start Single Slide -->
-                <div class="slide slider__full--screen"
-                    style="background: rgba(0, 0, 0, 0) url(images/slider/bg/1.png) no-repeat scroll center center / cover ;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 offset-lg-4">
-                                <div class="slider__inner">
-                                    <h1>Couture pour <span class="text--theme">Homme</span></h1>
-                                    {{-- <div class="slider__btn">
-                                        <a class="htc__btn" href="cart.html">shop now</a>
-                                    </div> --}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Slide -->
-                <!-- Start Single Slide -->
-                <div class="slide slider__full--screen"
-                    style="background: rgba(0, 0, 0, 0) url(images/slider/bg/3.png) no-repeat scroll center center / cover ;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="slider__inner">
-                                    <h1>Couture pour <span class="text--theme">Femme</span></h1>
-                                    <div class="slider__btn">
-                                        <a class="htc__btn" href="cart.html">shop now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Slide -->
+                <ul class="mainmenu">
+                    <li><a href="#about">A propos de nous</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Réalisations</a></li>
+                </ul>
             </div>
         </div>
-        <!-- Start Slider Area -->
-        <!-- Start Bradcaump area -->
-        <div class="ht__bradcaump__area"
-            style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat scroll center center / cover ;">
-            <div class="ht__bradcaump__wrap">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="bradcaump__inner text-center">
-                                <h2 class="bradcaump-title">A propos de nous </h2>
-                                {{-- <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="index.html">Home</a>
-                                    <span class="brd-separetor">/</span>
-                                    <span class="breadcrumb-item active">About Us</span>
-                                </nav> --}}
-                            </div>
+
+        <!-- Start Theme Style  -->
+        <div>
+            <div class="rainbow-gradient-circle"></div>
+            <div class="rainbow-gradient-circle theme-pink"></div>
+        </div>
+        <!-- End Theme Style  -->
+
+
+
+        <!-- Start Slider Area  -->
+        <div class="slider-area slider-style-3 height-850">
+            <div class="container">
+                <div class="row row--30 align-items-center">
+                    <div class="order-2 order-lg-1 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
+                        <div class="inner text-left">
+                            <h1 class="title theme-gradient">Ngalu <br>Business</h1>
+                            <p class="description">We design your world.</p>
+                        </div>
+                    </div>
+                    <div class="order-1 order-lg-2 col-lg-5">
+                        <div class="thumbnail">
+                            <img src="{{ asset('assets/images/about/about-2.png') }}" alt="Banner Images">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Bradcaump area -->
-        <!-- Start Our Store Area -->
-        <section class="htc__store__area ptb--120 bg__white">
+        <!-- End Slider Area  -->
+
+        <!-- Start Seperator Area  -->
+        <div class="rbt-separator-mid">
+            <div class="container">
+                <hr class="rbt-separator m-0">
+            </div>
+        </div>
+        <!-- End Seperator Area  -->
+
+        <!-- Start Tab Area  -->
+        <div id="about" class="rainbow-tab-area rainbow-section-gap">
+            <div class="container">
+                <div class="row mb--40">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700"
+                            data-sal-delay="100">
+                            <h4 class="subtitle "><span class="theme-gradient">A propos de nous.</span></h4>
+                            <h2 class="title w-600 mb--20">Découvrez Ngalu Business.</h2>
+                            <p class="description b1">Ngalu Business met à votre disposition une boutique
+                                qui met en avant les valeurs africaines. Nous avons développé une marque de
+                                vêtements made in DRC dénommée N'galudesign. Nous sommes également dans la
+                                formation professionnelle et sommes également un centre de professionnalisation
+                                et stage professionnel dans le domaine du stylisme, couture, esthétique.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- End Tab Area  -->
+
+        <!-- Start Seperator Area  -->
+        <div class="rbt-separator-mid">
+            <div class="container">
+                <hr class="rbt-separator m-0">
+            </div>
+        </div>
+        <!-- End Seperator Area  -->
+
+        <div id="services" class="rainbow-service-area rainbow-section-gap ">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="section__title section__title--2 text-center">
-                            {{-- <h2 class="title__line">Bienvenue</h2> --}}
-                            <p>Ngalu Business met à votre disposition une boutique qui met en avant les valeurs africaines. Nous avons développé une marque de vêtements made in DRC dénommée N'galudesign.
-Nous sommes également dans la formation professionnelle et sommes également un centre de professionnalisation et stage professionnel dans le domaine du stylisme, couture, esthétique...
-Nos cours se donnent en présentiel et à distance. Nous oeuvrons aussi dans l'agro business.</p>
-                        </div>
-                        <div class="store__btn">
-                            {{-- <a href="#">contact us</a> --}}
+                    <div class="col-lg-12">
+                        <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700"
+                            data-sal-delay="100">
+                            <h4 class="subtitle ">
+                                <span class="theme-gradient">Nos services</span>
+                            </h4>
+                            <h2 class="title w-600 mb--20">Ce que nous vous offrons.</h2>
+                            <p class="description b1">Découvrez les différents services qu'offre
+                                <br>Ngalu Business.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Start Footer Area -->
-        <footer class="htc__foooter__area"
-            style="background: rgba(0, 0, 0, 0) url(images/bg/1.jpg) no-repeat scroll center center / cover ;">
-            <div class="container">
-                <div class="row footer__container clearfix">
-                    <!-- Start Single Footer Widget -->
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <div class="ft__widget">
-                            <div class="ft__logo">
-                                <a href="{{ route('home') }}">
-                                    <img src="{{ asset('images/logo/logo-white-2x.png') }}" alt="logo">
-                                </a>
+                <div class="row row--15 service-wrapper">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700">
+                        <div class="service gallery-style text-left">
+                            <div class="inner">
+                                <div class="content">
+                                    <h4 class="title">
+                                        <a href="#">Boutique</a>
+                                    </h4>
+                                    <p class="description">Vêtements hommes & vêtements femmes. Nous avons également
+                                        notre marque
+                                        de vêtements dédiée aux personnes de grande taille, une marque de vêtements made
+                                        in DRC dénommée N'galudesign.</p>
+                                </div>
+                                <div class="image">
+                                    <img src="assets/images/services/galery-image-01.png" alt="card Images">
+                                </div>
                             </div>
-                            {{-- <div class="footer__details">
-                                <p>Get 10% discount with notified about the latest news and updates.</p>
-                            </div> --}}
                         </div>
                     </div>
-                    <!-- End Single Footer Widget -->
-                    <!-- Start Single Footer Widget -->
-                    <div class="col-md-6 col-lg-3 col-sm-6 smb-30 xmt-30">
-                        {{-- <div class="ft__widget">
-                            <h2 class="ft__title">Newsletter</h2>
-                            <div class="newsletter__form">
-                                <div class="input__box">
-                                    <div id="mc_embed_signup">
-                                        <form
-                                            action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
-                                            method="post" id="mc-embedded-subscribe-form"
-                                            name="mc-embedded-subscribe-form" class="validate" target="_blank"
-                                            novalidate>
-                                            <div id="mc_embed_signup_scroll" class="htc__news__inner">
-                                                <div class="news__input">
-                                                    <input type="email" value="" name="EMAIL"
-                                                        class="email" id="mce-EMAIL" placeholder="Email Address"
-                                                        required>
-                                                </div>
-                                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                                    <input type="text"
-                                                        name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1"
-                                                        value=""></div>
-                                                <div class="clearfix subscribe__btn"><input type="submit"
-                                                        value="Send" name="subscribe" id="mc-embedded-subscribe"
-                                                        class="bst__btn btn--white__color">
 
-                                                </div>
-                                            </div>
-                                        </form>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700"
+                        data-sal-delay="100">
+                        <div class="service gallery-style text-left">
+                            <div class="inner">
+                                <div class="content">
+                                    <h4 class="title">
+                                        <a href="#">Formations</a>
+                                    </h4>
+                                    <p class="description">Nous sommes dans la formation professionnelle et
+                                        sommes également un centre de professionnalisation
+                                        et stage professionnel dans le domaine du stylisme, couture, esthétique...</p>
+                                </div>
+                                <div class="image">
+                                    <img src="assets/images/services/galery-image-02.png" alt="card Images">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700"
+                        data-sal-delay="200">
+                        <div class="service gallery-style text-left">
+                            <div class="inner">
+                                <div class="content">
+                                    <h4 class="title">
+                                        <a href="#">Conception textile</a>
+                                    </h4>
+                                    <p class="description">Nous vous aideons à choisir les matières premières les plus
+                                        adaptées à vos besoins et à créer des motifs uniques.</p>
+                                </div>
+                                <div class="image">
+                                    <img src="assets/images/services/galery-image-03.png" alt="card Images">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Start Seperator Area  -->
+        <div class="rbt-separator-mid">
+            <div class="container">
+                <hr class="rbt-separator m-0">
+            </div>
+        </div>
+        <!-- End Seperator Area  -->
+
+        <div id="portfolio" class="rainbow-portfolio-area rainbow-section-gap masonary-wrapper-activation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mb--50" data-sal="slide-up" data-sal-duration="400"
+                            data-sal-delay="150">
+                            <h4 class="subtitle">
+                                <span class="theme-gradient">Portfolio</span>
+                            </h4>
+                            <h2 class="title w-600 mb--20">Découvrez nos réalisations</h2>
+                            <p class="description b1"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="portfolio-items grid-metro2 mesonry-list">
+                            <div class="resizer"></div>
+                            <!-- Start Single Portfolio  -->
+                            <div class="portfolio-2 cat--1 cat--4">
+                                <div class="rainbow-card portfolio">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <figure class="card-image">
+                                                <a href="#">
+                                                    <img src="assets/images/portfolio/portfolio-01.jpg"
+                                                        alt="Portfolio-01">
+                                                </a>
+                                            </figure>
+                                            <a class="rainbow-overlay" href="#"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="title mb--10">
+                                                <a href="#">Formation</a>
+                                            </h5>
+                                            <span class="subtitle b2">Tenue réalisée pendant l'encadrement chez Ngalu
+                                                Business</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
+                            <!-- Start Single Portfolio  -->
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="portfolio-2 cat--2 cat--3">
+                                <div class="rainbow-card portfolio">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <figure class="card-image">
+                                                <a href="#">
+                                                    <img src="assets/images/portfolio/portfolio-02.jpg"
+                                                        alt="Portfolio-01">
+                                                </a>
+                                            </figure>
+                                            <a class="rainbow-overlay" href="#"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="title mb--10">
+                                                <a href="#">Formation</a>
+                                            </h5>
+                                            <span class="subtitle b2">Tenue réalisée pendant l'encadrement chez Ngalu
+                                                Business</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Single Portfolio  -->
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="portfolio-2 cat--3 cat--4 cat--1">
+                                <div class="rainbow-card portfolio">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <figure class="card-image">
+                                                <a href="#">
+                                                    <img src="assets/images/portfolio/portfolio-03.jpg"
+                                                        alt="Portfolio-01">
+                                                </a>
+                                            </figure>
+                                            <a class="rainbow-overlay" href="#"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="title mb--10">
+                                                <a href="#">Formation</a>
+                                            </h5>
+                                            <span class="subtitle b2">Tenue réalisée pendant l'encadrement chez Ngalu
+                                                Business</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Single Portfolio  -->
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="portfolio-2 cat--3 cat--2">
+                                <div class="rainbow-card portfolio">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <figure class="card-image">
+                                                <a href="#">
+                                                    <img src="assets/images/portfolio/portfolio-04.jpg"
+                                                        alt="Portfolio-01">
+                                                </a>
+                                            </figure>
+                                            <a class="rainbow-overlay" href="#"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="title mb--10">
+                                                <a href="#">Formation</a>
+                                            </h5>
+                                            <span class="subtitle b2">Tenue réalisée pendant l'encadrement chez Ngalu
+                                                Business</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Single Portfolio  -->
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="portfolio-2 cat--2 cat--4">
+                                <div class="rainbow-card portfolio">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <figure class="card-image">
+                                                <a href="#">
+                                                    <img src="assets/images/portfolio/portfolio-05.jpg"
+                                                        alt="Portfolio-01">
+                                                </a>
+                                            </figure>
+                                            <a class="rainbow-overlay" href="#"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="title mb--10">
+                                                <a href="#">Formation</a>
+                                            </h5>
+                                            <span class="subtitle b2">Tenue réalisée pendant l'encadrement chez Ngalu
+                                                Business</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Single Portfolio  -->
+
+                            <!-- Start Single Portfolio  -->
+                            <div class="portfolio-2 cat--3 cat--2 cat--1">
+                                <div class="rainbow-card portfolio">
+                                    <div class="inner">
+                                        <div class="thumbnail">
+                                            <figure class="card-image">
+                                                <a href="#">
+                                                    <img src="assets/images/portfolio/portfolio-06.jpg"
+                                                        alt="Portfolio-01">
+                                                </a>
+                                            </figure>
+                                            <a class="rainbow-overlay" href="#"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="title mb--10">
+                                                <a href="#">Formation</a>
+                                            </h5>
+                                            <span class="subtitle b2">Tenue réalisée pendant l'encadrement chez Ngalu
+                                                Business</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Single Portfolio  -->
+                        </div>
                     </div>
-                    <!-- End Single Footer Widget -->
-                    <!-- Start Single Footer Widget -->
-                    <div class="col-md-6 col-lg-3 col-sm-6 smt-30 xmt-30">
-                        <div class="ft__widget contact__us">
-                            <h2 class="ft__title">Contactez-nous</h2>
-                            <div class="footer__inner">
-                                <p> 50, Av. Des Violettes <br> Q/Bel-Air </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Start Seperator Area  -->
+        <div class="rbt-separator-mid">
+            <div class="container">
+                <hr class="rbt-separator m-0">
+            </div>
+        </div>
+        <!-- End Seperator Area  -->
+
+
+
+        <div class="footer-style-3">
+
+            <div class="copyright-area copyright-style-one variation-two">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-7 col-sm-12 col-12">
+                            <div class="copyright-left">
+                                {{-- <ul class="ft-menu link-hover">
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="#">Terms And Condition</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul> --}}
                             </div>
                         </div>
-                    </div>
-                    <!-- End Single Footer Widget -->
-                    <!-- Start Single Footer Widget -->
-                    <div class="col-md-6 col-lg-2 lg-offset-1 col-sm-6 smt-30 xmt-30">
-                        <div class="ft__widget">
-                            <h2 class="ft__title">Suivez-nous</h2>
-                            <ul class="social__icon">
-                                <li><a href="https://www.linkedin.com/company/ngalu-business/" target="_blank"><i class="zmdi zmdi-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Single Footer Widget -->
-                </div>
-                <!-- Start Copyright Area -->
-                <div class="htc__copyright__area">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                            <div class="copyright__inner">
-                                <div class="copyright">
-                                    <p>© 2023 &copy; Ngalu Business.</a></p>
-                                </div>
-                                <ul class="footer__menu">
-                                    <li><a href="{{ route('home') }}">Accueil</a></li>
+                        <div class="col-lg-4 col-md-5 mt_sm--20">
+                            <div class="copyright-center text-center">
+                                <ul class="social-icon social-default color-lessdark justify-content-center">
+                                    <li data-sal="slide-up" data-sal-duration="400" data-sal-delay="500"><a
+                                            href="https://www.linkedin.com/company/ngalu-business/">
+                                            <i class="feather-linkedin"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 col-12 mt_md--20 mt_sm--20">
+                            <div class="copyright-right text-center text-lg-end">
+                                <p class="copyright-text">© Ngalu Business 2023
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- End Copyright Area -->
             </div>
-        </footer>
-        <!-- End Footer Area -->
+        </div>
+    </main>
+
+    <!-- All Scripts  -->
+    <!-- Start Top To Bottom Area  -->
+    <div class="rainbow-back-top">
+        <i class="feather-arrow-up"></i>
     </div>
-    <!-- Body main wrapper end -->
-
-    <!-- Placed js at the end of the document so the pages load faster -->
-
-    <!-- jquery latest version -->
-    <script src="{{ asset('js/vendor/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('js/vendor/jquery-migrate-3.3.2.min.js') }}"></script>
-    <script src="{{ asset('js/vendor/jquery.waypoints.js') }}"></script>
-    <!-- Bootstrap Framework js -->
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <!-- All js plugins included in this file. -->
-    <script src="{{ asset('js/plugins.js') }}"></script>
-    <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="{{ asset('js/main.js') }}"></script>
-
+    <!-- End Top To Bottom Area  -->
+    <!-- JS
+============================================ -->
+    <script src="{{ asset('assets/js/vendor/modernizr.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/waypoint.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/feather.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/sal.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/masonry.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/imageloaded.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/magnify.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/lightbox.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/easypie.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/text-type.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery.style.swicher.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/js.cookie.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-one-page-nav.js') }}"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
